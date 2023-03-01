@@ -20,6 +20,14 @@ include(../RTKLib.pri)
 win* {
     CONFIG += staticlib
 }
+
+#https://stackoverflow.com/questions/18462420/how-to-specify-mac-platform-in-qmake-qtcreator
+
+macx {
+    CONFIG += staticlib
+}
+
+
 *msvc* {
     QMAKE_CFLAGS += -D_CRT_SECURE_NO_WARNINGS
 }
